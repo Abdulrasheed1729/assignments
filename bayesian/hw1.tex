@@ -1,0 +1,48 @@
+\section{Problem 1}
+
+By the definition of odds we have
+\[
+  O \equiv \frac{p}{1-p}
+\]
+multiplying both sides by $(1 - p)$ implies:
+\begin{align*}
+  O \cdot (1 - p) & = p \\
+            O - O \cdot p    & = p \\
+            p + O \cdot p & = O \\
+            p(1 + O) & = O \\
+    \implies p = \frac{O}{1 + O}
+\end{align*}
+
+\section{Problem 2}
+From the odd form of the Baye's theorem we have the following:
+\[
+  \underbrace{O(H \mid D)}_{\text{posterior odds}} = \text{LR} \times \underbrace{O(H)}_{\text{prior odds}}
+\]
+from the statement of the problem we have that: $\pr(H) = p,\quad \text{LR} = 2$, obviously $O(H) = p/(1 - p)$
+\begin{align*}
+  \implies O(H \mid D) &= 2 \times \frac{p}{1 - p} \\
+  & = \frac{2p}{1 - p}
+\end{align*}
+using the result from problem 1, we have the following:
+\begin{align*}
+  \pr(H mid D) & = \frac{\frac{2p}{1 - p}} {1 + \frac{2p}{1 - p}} \\ 
+  & = \frac{2p}{1 - p}
+\end{align*}
+
+$therefore$ the posterior probability in terms of $p$ is:
+\[
+\frac{2p} {1 + p}
+\]
+
+\section{Problem 3}
+Let the hypothesis for rolling a 6-sided and 12-sided die be $H_{6}$ and $H_{12}$ respectfully. We will constt=ruct a Bayesian table for each of the given data below.\\
+When $D = 3$
+
+\begin{tabular}[h]{cccccccc}
+  H & $\pr(H)$ & $\times$ & $\pr(D \mid H)$ & $=$ & $ \pr(H) \cdot \pr(D \mid H)$ & $\alpha$ & $\pr(H \mid D)$ \\
+  \hline
+$H_6$ & $\disp\frac14$ &  & $\disp\frac16$ & & $\disp \frac{1}{24}$ & & $\pr(H \mid D)$ \\
+&&&&&&&\\
+$H_{12}$ & $\disp\frac34$ &  & $\disp \frac12$ &  & $ \disp \frac{3}{48}$ & $\alpha$ & $\pr(H \mid D)$ \\
+\end{tabular}
+

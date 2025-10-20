@@ -1,0 +1,223 @@
+\documentclass[11pt,twoside=semi,openright,numbers=noenddot]{scrartcl}
+
+
+
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{cleveref}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage{listings}
+% \usepackage[outputdir=build]{minted}
+% \usepackage{pygmentex}
+\usepackage{tcolorbox}
+\usepackage{euler}
+
+\newcommand{\pr}{\mathrm{Pr}}
+\newcommand{\disp}{\displaystyle}
+
+% \setmintedinline{breaklines}
+
+% \newcommand{\incode}[1]{\mintinline[breakanywhere]{c++}|#1|}
+
+% \setmonofont{Inconsolata}
+
+% \tcbuselibrary{listings, minted, skins}
+
+% \tcbset{listing engine=minted}
+
+% % \usemintedstyle{one-dark}
+% % \setmonofont{Consolas}
+
+% \newtcblisting{bashcode}{
+%     listing only,
+%     minted language=bash,
+%     minted style=murphy,
+%     % colback=bg,
+%     enhanced,
+%     frame hidden,
+%     skin=tile,
+%     width=\textwidth,
+%     top=6pt,bottom=6pt,left=6pt,right=2pt,
+%     minted options={
+%         % fontfamily=fdm,
+%         %     fontsize=\footnotesize,
+%              tabsize=2, breaklines, gobble=0}
+% }
+
+% \newtcblisting{yamlcode}{
+%     listing only,
+%     minted language=yaml,
+%     minted style=gruvbox-dark,
+%     colback=bg,
+%     enhanced,
+%     frame hidden,
+%     skin=tile,
+%     width=\textwidth,
+%     top=6pt,bottom=6pt,left=6pt,right=2pt,
+%     minted options={
+%         % fontfamily=fdm,
+%         %     fontsize=\footnotesize,
+%              tabsize=1, breaklines, gobble=0}
+% }
+
+% \newtcblisting{dartcode}{
+%     listing only,
+%     minted language=dart,
+%     minted style=one-dark,
+%     colback=bg,
+%     enhanced,
+%     frame hidden,
+%     skin=tile,
+%     width=\textwidth,
+%     top=6pt,bottom=6pt,left=6pt,right=2pt,
+%     minted options={
+%         % fontfamily=fdm,
+%         %     fontsize=\footnotesize,
+%              tabsize=1, breaklines, gobble=0}
+% }
+
+% % \definecolor{inline}{RGB}{187,57,82}
+% \definecolor{bg}{RGB}{30,30,46}
+% % \setminted[bash]{bgcolor=bg}
+
+% \usemintedstyle{one-dark}
+
+% \newenvironment{bashcode}{
+%     \begin{minted}[style=one-dark]{bash}
+% }
+% {
+%     \end{minted}
+% }
+
+
+
+\hypersetup{
+    linkcolor={red!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black},
+    pdfkeywords={napkin,math},
+    pdfsubject={web.evanchen.cc},
+    colorlinks,
+    pdfusetitle,
+}
+
+\usepackage{braket}
+
+\newcommand{\tddversion}{v1.0.\hbox{\the\year\twodigits\month\twodigits\day}}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+% \renewcommand{\headfont}{}
+% \addtolength{\textheight}{3.14cm}
+% \setlength{\footskip}{0.5in}
+% \setlength{\headsep}{10pt}
+
+\def\shortdate{\leavevmode\hbox{\the\year-\twodigits\month-\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+% \automark[chapter]{chapter}
+
+\rohead{\footnotesize\thepage}
+\rehead{\footnotesize \textbf{\sffamily Bayesian Inference Homework Solutions} (\tddversion)}
+\lehead{\footnotesize\thepage}
+\lohead{\footnotesize \leftmark}
+\chead{}
+\rofoot{}
+\refoot{}
+\lefoot{}
+\lofoot{}
+%\cfoot{\pagemark}
+
+%%fakesection Fancy section and chapter heads
+\renewcommand*{\sectionformat}{\color{teal}\S\thesection\autodot\enskip}
+\renewcommand*{\subsectionformat}{\color{cyan}\S\thesubsection\autodot\enskip}
+% \renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+
+% \addtokomafont{chapterprefix}{\raggedleft}
+% \RedeclareSectionCommand[beforeskip=0.5em]{chapter}
+% \renewcommand*{\chapterformat}{%
+%     \mbox{\scalebox{1.5}{\chapappifchapterprefix{\nobreakspace}}%
+%         \scalebox{2.718}{\color{purple}\thechapter\autodot}\enskip}}
+
+% \addtokomafont{partprefix}{\rmfamily}
+% \renewcommand*{\partformat}{\color{purple}\scalebox{2.5}{\thepart}}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\fakesubsection}[1]{\large{\textbf{#1}}\\}
+
+\newcommand{\fakelinklistitem}[3]{\href{#2}{\textbf{#1}}: #3}
+
+
+
+\title{Solution to Home work 1}
+\author{Abdulrasheed Bolaji Fawole} 
+\date{\href{mailto:abdulrasheed@aima.ac.za}{abdulrasheed@aima.ac.za}}
+
+
+
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+\begin{enumerate}	
+\item \begin{equation*}
+\begin{bmatrix}
+	1 \\ 0
+\end{bmatrix}  = \ket{0} \quad
+
+\begin{bmatrix}
+	1 \\ 0
+\end{bmatrix}  = \ket{1} \quad
+
+\frac{1}{\sqrt{2}} \begin{bmatrix}
+	1 \\ i
+\end{bmatrix}  = \frac{1}{\sqrt{2}} (\ket{0} + i \ket{1}) \quad
+
+
+
+\end{equation*}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
