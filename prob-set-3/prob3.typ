@@ -30,8 +30,8 @@ $
   [sigma_2, sigma_3] & = sigma_2 sigma_3 - sigma_3 sigma_2 \
                      & = Y Z - Z Y \
                      & = mat(0, -i; i, 1) mat(1, 0; 0, -1) - mat(1, 0; 0, -1) mat(0, -i; i, 1) \
-                     & = mat(0, -1; 1, 0) - mat(0, 1; -1, 0) \
-                     & = mat(0, -2; 2, 0) \
-  [sigma_3, sigma_1] & = - [sigma_1, sigma_3] \
-                     & = mat(0, 2; -2, 0)
+                     & = mat(0, i; i, 0) - mat(0, -i; -i, 0) \
+                     & = mat(0, 2i; 2i, 0) \
+  [sigma_3, sigma_2] & = - [sigma_2, sigma_3] \
+                     & = mat(0, -2i; -2i, 0)
 $
