@@ -11,15 +11,15 @@ _Proof_
 
 It is obvious for $rho_0$ since $tr(rho_0) = 3/4 != 1$. Also for $rho_1$, $rho_1^dagger != rho_1$
 
-Though $rho_3$ is Hermitian, but its characteristic polynomial of $lambda^2 - lambda + 1$ has a discriminant of $-3$, which shows that the eigen values of $rho_3$ is complex.
+Though $rho_3$ is Hermitian, but it has eigen-values of $(1 plus.minus sqrt(5) / 2)$ one of which is a negative number.
 
 2. Let $A_(i j), B_(i j)$ be the entries of $A, B$ respectively. Consider the following
 $
   (A B)_(i j) & = sum_(k = 1)^n A_(i k) B_(k j) \
   (B A)_(i j) & = sum_(k = 1)^n B_(i k) A_(k j) \
       tr(A B) & = sum_(i = 1)^n sum_(k = 1)^n A_(i k) B_(k i) \
-              & = sum_(i = 1)^n sum_(k = 1)^n A_(k i) B_(i k) \
-              & = sum_(i = 1)^n sum_(k = 1)^n B_(i k) A_(k i) quad " by symmetry"
+              & = sum_(k = 1)^n sum_(i = 1)^n A_(k i) B_(i k) \
+              & = sum_(k = 1)^n sum_(i = 1)^n B_(i k) A_(k i) quad " by symmetry"
 $
 Note that $sum_(k = 1)^n B_(i k) A_(k i)$ is the (i,j)th entry of the matrix $B A$, then it folllows that $tr(A B) = tr(B A)$ for all square matrices of the same dimension.
 
@@ -108,3 +108,21 @@ $
         & = 1/2 (ketbra(0) + ketbra(1))
 $
 note that by symmetry it is obvious that $rho_A = rho_B$
+
+5. The state after trtansformation is given by:
+$
+  X rho X^dagger & = mat(0, 1; 1, 0) mat(1/2, 1/2; 1/2, 1/2) mat(0, 1; 1, 0)^dagger \
+                 & = 1/2 mat(0, 1; 1, 0) mat(1, 1; 1, 1) mat(0, 1; 1, 0) \
+                 & = 1/2 mat(0, 1; 1, 0) mat(1, 1; 1, 1) \
+                 & = 1/2 mat(1, 1; 1, 1) \
+                 & = rho
+$
+
+6. Given the state $ket(a)ket(b)$, then $rho = ket(a)ket(b)bra(a)bra(b) = ketbra(a) times.circle ketbra(b)$. Consider the following
+$
+  rho_A & = tr_B (rho) \
+        & = tr_B (ketbra(a) times.circle ketbra(b)) \
+        & = ketbra(a) tr (ketbra(b)) \
+        & = ketbra(a)
+$
+then it follows that $rho_A$ is a pure state.
